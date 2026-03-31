@@ -18,6 +18,29 @@ Flutter To-Do Application
 
 ---
 
+## How to Run the Project
+
+### Prerequisites
+* Flutter SDK (Stable)
+* Android Emulator or Physical Device
+* Internet Connection
+
+### Local Setup
+1. Clone the repository.
+2. Run `flutter pub get` to install dependencies (including Google Fonts).
+3. Run `flutter run` to launch the app on your connected device.
+
+---
+
+## Docker Integration (Automation)
+This project includes a `Dockerfile` designed to automate the Android build environment.
+
+### To Build the APK via Docker:
+1. Ensure Docker Desktop is running.
+2. Build the image:
+   ```bash
+   docker build -t flutter-todo-build .
+
 ## Research Question / Problem Statement:
 How can we efficiently manage daily tasks using a simple, interactive mobile application?
 
