@@ -1,17 +1,75 @@
 # to_do_app
 
-A new Flutter project.
+# Final Project Submission: Flutter To-Do App
 
-## Getting Started
+## Student Name:
+KASIM CHOGLE
 
-This project is a starting point for a Flutter application.
+## Student Number:
+240417961
 
-A few resources to get you started if this is your first Flutter project:
+## Lesson Name and Number:
+COM206 - VISUAL PROGRAMMING
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project Title:
+Flutter To-Do Application
+
+---
+
+## Research Question / Problem Statement:
+How can we efficiently manage daily tasks using a simple, interactive mobile application?
+
+---
+
+## Objective of the Project:
+The project aims to develop a Flutter-based To-Do app that allows users to:
+- Add new tasks
+- Mark tasks as completed or incomplete
+- Delete tasks
+- Search for tasks
+
+---
+
+## Expected Outcome:
+A fully functional Flutter mobile app that demonstrates task management features with a clean and user-friendly interface.
+
+---
+
+## Methodology:
+
+### Control Flow:
+1. Start the app  
+2. Display all existing tasks  
+3. Allow users to:
+   - Add a new task via TextField  
+   - Mark tasks as done/undone  
+   - Delete tasks  
+   - Search for tasks  
+4. Repeat until the app is closed
+
+### Components:
+- **Input:** TextField for new tasks and search bar  
+- **Processing:** Maintain a list of `ToDo` objects in state  
+- **Output:** Display tasks in a scrollable `ListView`  
+
+---
+
+## Technical Implementation:
+- **Programming Language:** Dart  
+- **Framework:** Flutter  
+- **Packages Used:** 
+  - `google_fonts` (for custom fonts)  
+
+### Example Code Snippet:
+```dart
+void _addToDoItem(String toDo){
+  setState(() {
+    todosList.add(ToDo(
+      id: DateTime.now().millisecondsSinceEpoch.toString(),
+      todoText: toDo
+    ));
+  });
+  _todoController.clear();
+}
