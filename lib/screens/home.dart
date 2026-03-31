@@ -49,13 +49,16 @@ setState(() {
 void _deleteToDoItem(String id){
   setState(() {
     todosList.removeWhere((item) => item.id == id);
+    _foundToDo = List.from(todosList);
 
   });
 }
 
 void _addToDoItem(String toDo){
+  if (toDo.isEmpty) return;
   setState(() {
   todosList.add(ToDo(id: DateTime.now().millisecondsSinceEpoch.toString(), todoText: toDo));
+  _foundToDo = List.from(todosList);
 });
 _todoController.clear();
 }
